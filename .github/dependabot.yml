@@ -1,0 +1,27 @@
+version: 2
+updates:
+- package-ecosystem: gradle
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  target-branch: devel
+  ignore:
+  - dependency-name: net.bytebuddy:byte-buddy
+    versions:
+    - 1.10.19
+    - 1.10.20
+    - 1.10.21
+    - 1.10.22
+  - dependency-name: com.gradle.publish:plugin-publish-plugin
+    versions:
+    - 0.13.0
+  - dependency-name: com.netflix.nebula:nebula-test
+    versions:
+    - 7.10.2
+  - dependency-name: org.spockframework:spock-core
+    versions:
+    - 2.0-M4-groovy-3.0
+  - dependency-name: org.spockframework:spock-junit4
+    versions:
+    - 2.0-M4-groovy-3.0
